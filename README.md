@@ -30,7 +30,7 @@ Please check the board definition for details.
 
 ### Making your own UF2
 
-To create your own UF2 DFU update image, simply use the [Python conversion script](https://github.com/Microsoft/uf2/blob/master/utils/uf2conv.py) on a .bin file or .hex file, specifying the family as **0xADA52840** (nRF52840) or **0x621E937A** (nRF52833).
+To create your own UF2 DFU update image, simply use the [Python conversion script](https://github.com/Microsoft/uf2/blob/master/utils/uf2conv.py) on a .bin file or .hex file, specifying the family as **0xADA52840** (nRF52840)
 
 ```
 nRF52840
