@@ -55,14 +55,14 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: nice_nano
-        path: _bin/nice_nano
+        name: mdk_nrf52840_dongle
+        path: _bin/mdk_nrf52840_dongle
 
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v1
       if: ${{ github.event_name == 'release' }}
       with:
         files: |
-          _bin/nice_nano/nice_nano_bootloader-*.zip
-          _bin/nice_nano/nice_nano_bootloader-*.hex
-          _bin/nice_nano/update-nice_nano_bootloader-*.uf2
+          _bin/mdk_nrf52840_dongle/mdk_nrf52840_dongle_bootloader-*.zip
+          _bin/mdk_nrf52840_dongle/mdk_nrf52840_dongle_bootloader-*.hex
+          _bin/mdk_nrf52840_dongle/update-mdk_nrf52840_dongle_bootloader-*.uf2

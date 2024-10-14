@@ -96,3 +96,7 @@ make SERIAL=/dev/ttyACM0 flash-dfu
 make flash-sd  # flash SoftDevice (will erase chip)
 make flash-mbr # flash mbr only
 ```
+
+# 说明
+
+make all 之后，写入 opensk.uf2

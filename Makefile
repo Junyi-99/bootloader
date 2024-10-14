@@ -36,7 +36,7 @@ GIT_VERSION := $(shell git describe --dirty --always --tags)
 GIT_SUBMODULE_VERSIONS := $(shell git submodule status | cut -d" " -f3,4 | paste -s -d" " -)
 
 # compiled file name
-OUT_NAME = nice_nano_bootloader-$(GIT_VERSION)
+OUT_NAME = mdk_nrf52840_dongle_bootloader-$(GIT_VERSION)
 
 # merged file = compiled + sd
 MERGED_FILE = $(OUT_NAME)_$(SD_NAME)_$(SD_VERSION)
@@ -91,8 +91,8 @@ BMP_PORT ?= $(shell ls -1 /dev/cu.usbmodem????????1 | head -1)
 GDB_BMP = $(GDB) -ex 'target extended-remote $(BMP_PORT)' -ex 'monitor swdp_scan' -ex 'attach 1'
 
 # Build directory
-BUILD = _build/build-nice_nano
-BIN = _bin/nice_nano
+BUILD = _build/build-mdk_nrf52840_dongle
+BIN = _bin/mdk_nrf52840_dongle
 
 SD_NAME = s140
 DFU_DEV_REV = 52840
@@ -156,7 +156,7 @@ IPATH += $(SDK_PATH)/drivers_nrf/uart
 else
 
 # pinconfig is required for 840 for CF2
-C_SRC += src/boards/nice_nano/pinconfig.c
+C_SRC += src/boards/mdk_nrf52840_dongle/pinconfig.c
 
 # USB Application ( MSC + UF2 )
 C_SRC += \
@@ -190,7 +190,7 @@ ASM_SRC = $(NRFX_PATH)/mdk/gcc_startup_nrf52840.S
 IPATH += \
   src \
   src/boards \
-  src/boards/nice_nano \
+  src/boards/mdk_nrf52840_dongle \
   src/cmsis/include \
   src/usb \
   $(TUSB_PATH)
