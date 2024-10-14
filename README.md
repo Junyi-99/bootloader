@@ -100,3 +100,9 @@ make flash-mbr # flash mbr only
 # 说明
 
 make all 之后，写入 opensk.uf2
+
+
+`DCONFIG_GPIO_AS_PINRESET` 被定义的时候， `P0.18` 会被当作 `RESET`
+
+这个 `P0.18` 不能修改成别的 PIN
+
