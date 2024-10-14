@@ -38,15 +38,15 @@
 #define LED_RGB_RED_PIN       _PINNUM(0, 23)
 #define LED_RGB_GREEN_PIN     _PINNUM(0, 22)
 #define LED_RGB_BLUE_PIN      _PINNUM(0, 24)
-#define BOARD_RGB_BRIGHTNESS  0x404040
+#define BOARD_RGB_BRIGHTNESS  0x202020
 
 /*------------------------------------------------------------------*/
 /* BUTTON
  *------------------------------------------------------------------*/
 // TODO(gpshead): simplify, have code support 0.  double reset only.
 #define BUTTONS_NUMBER        2  // none connected at all
-#define BUTTON_1              _PINNUM(0, 18)  // unusable: RESET
-#define BUTTON_2              _PINNUM(0, 19)  // no connection
+#define BUTTON_1              _PINNUM(0, 2)  // unusable: RESET
+#define BUTTON_2              _PINNUM(0, 3)  // no connection
 #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
